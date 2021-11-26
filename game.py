@@ -36,6 +36,7 @@ class Tictoe:
         return True
 
 
+
     def get_board_state(self):
         # horizontal
         for i in range(0, 3):
@@ -70,6 +71,20 @@ class Tictoe:
             return 'tie'
 
         return 'playing'
+
+    def is_termina(self):
+        if self.get_board_state() == 'win' or self.get_board_state() == 'lost' or self.get_board_state() == 'tie':
+            return True
+        return False
+    def get_score(self):
+        if get_board_state() == 'win':
+            return 1000000
+
+
+    def alphabeta(self, depth, alpha, beta, maximizingPlayer):
+        if depth == 0 or self.is_termina():
+            return self.score()
+
 
 
 def main():
